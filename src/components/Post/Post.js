@@ -13,9 +13,14 @@ import "./Post.css";
 const useStyles = makeStyles({
   root: {
     maxWidth: 320,
+    // marginTop: 15,
+    // marginBottom: 30,
+    // marginRight: 15,
+    margin: 7,
   },
   media: {
     height: 140,
+    minWidth: 320,
   },
 });
 
@@ -38,9 +43,9 @@ const Post = (props) => {
             <Typography variant="body2" color="textSecondary" component="p">
               Post Id: {id}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            {/* <Typography variant="body2" color="textSecondary" component="p">
               {body}
-            </Typography>
+            </Typography> */}
           </CardContent>
         </CardActionArea>
         <CardActions>

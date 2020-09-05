@@ -7,15 +7,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Comments from "../../Comments/Comments";
+import Header from "../Header/Header";
+import { CardMedia } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 340,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
   },
   title: {
     fontSize: 14,
@@ -23,13 +20,10 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
-  margin: 30,
-  padding: 100,
 });
 
 const PostDetail = () => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   const { postId } = useParams();
   const [post, setPost] = useState({});
@@ -42,6 +36,7 @@ const PostDetail = () => {
   }, []);
   return (
     <div>
+      <Header></Header>
       <center>
         <h2>Post Details</h2>
       </center>
@@ -61,6 +56,7 @@ const PostDetail = () => {
             <Typography className={classes.pos} color="textSecondary">
               Author Id: {userId}
             </Typography>
+
             <Typography variant="body2" component="p">
               {body}
               <br />

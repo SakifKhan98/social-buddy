@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Grid, makeStyles, Box } from "@material-ui/core";
 import Post from "../Post/Post";
+import Header from "../Header/Header";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -12,6 +13,7 @@ const Home = () => {
   });
   return (
     <div>
+      <Header></Header>
       <Grid container>
         {" "}
         {posts.map((post) => (
